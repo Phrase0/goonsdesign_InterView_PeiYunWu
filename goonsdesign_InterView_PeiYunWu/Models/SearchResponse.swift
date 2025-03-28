@@ -7,8 +7,6 @@
 
 import UIKit
 
-// MARK: - Model
-
 struct SearchResponse: Codable {
     let items: [Repository]
 }
