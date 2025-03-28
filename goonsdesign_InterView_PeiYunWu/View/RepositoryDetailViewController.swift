@@ -10,8 +10,7 @@ import UIKit
 class RepositoryDetailViewController: UIViewController {
     
     private let repository: Repository
-    
-    // MARK: - UI Elements
+
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -56,9 +55,7 @@ class RepositoryDetailViewController: UIViewController {
         configureData()
     }
     
-    // MARK: - 設置 UI
     private func setupUI() {
-        
         navigationItem.title = repository.owner.login
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -97,7 +94,7 @@ class RepositoryDetailViewController: UIViewController {
         ])
     }
     
-    // MARK: - 設定資料
+    // 設定資料
     private func configureData() {
         nameLabel.text = "\(repository.owner.login)/\(repository.name)"
         languageLabel.text = "Written in \(repository.language ?? "Unknown")"
@@ -108,7 +105,7 @@ class RepositoryDetailViewController: UIViewController {
         fetchImage(from: repository.owner.avatar_url)
     }
 
-    // MARK: - 加載圖片
+    // 加載圖片
     private func fetchImage(from url: String) {
         guard let imageUrl = URL(string: url) else { return }
         URLSession.shared.dataTask(with: imageUrl) { data, _, error in
@@ -119,7 +116,7 @@ class RepositoryDetailViewController: UIViewController {
         }.resume()
     }
 
-    // MARK: - 建立通用的 Info Label
+    // 建立通用的 Info Label
     private static func createInfoLabel() -> UILabel {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16)
