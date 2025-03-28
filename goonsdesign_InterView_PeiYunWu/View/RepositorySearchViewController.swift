@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class RepositorySearchViewController: UIViewController {
     
     private let searchBar: UISearchBar = {

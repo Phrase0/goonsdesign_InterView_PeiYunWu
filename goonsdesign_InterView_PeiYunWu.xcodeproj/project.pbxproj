@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F2228B734D4B646573D6C681 /* Pods_goonsdesign_InterView_PeiYunWu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2E368D41FAB5F073A6AEC9 /* Pods_goonsdesign_InterView_PeiYunWu.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		2D76B85599611BF286906024 /* Pods-goonsdesign_InterView_PeiYunWu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goonsdesign_InterView_PeiYunWu.debug.xcconfig"; path = "Target Support Files/Pods-goonsdesign_InterView_PeiYunWu/Pods-goonsdesign_InterView_PeiYunWu.debug.xcconfig"; sourceTree = "<group>"; };
+		9D099DDEE7A065DFA3C98FCD /* Pods-goonsdesign_InterView_PeiYunWu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-goonsdesign_InterView_PeiYunWu.release.xcconfig"; path = "Target Support Files/Pods-goonsdesign_InterView_PeiYunWu/Pods-goonsdesign_InterView_PeiYunWu.release.xcconfig"; sourceTree = "<group>"; };
+		AC2E368D41FAB5F073A6AEC9 /* Pods_goonsdesign_InterView_PeiYunWu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_goonsdesign_InterView_PeiYunWu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F5C022D949E020064AEA0 /* goonsdesign_InterView_PeiYunWu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goonsdesign_InterView_PeiYunWu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2228B734D4B646573D6C681 /* Pods_goonsdesign_InterView_PeiYunWu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19F6696B290A5C27FBECB425 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D76B85599611BF286906024 /* Pods-goonsdesign_InterView_PeiYunWu.debug.xcconfig */,
+				9D099DDEE7A065DFA3C98FCD /* Pods-goonsdesign_InterView_PeiYunWu.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D0885A0F1C01CE8504A3C84E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC2E368D41FAB5F073A6AEC9 /* Pods_goonsdesign_InterView_PeiYunWu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F87F5BF92D949E020064AEA0 = {
 			isa = PBXGroup;
 			children = (
 				F87F5C042D949E020064AEA0 /* goonsdesign_InterView_PeiYunWu */,
 				F87F5C032D949E020064AEA0 /* Products */,
+				19F6696B290A5C27FBECB425 /* Pods */,
+				D0885A0F1C01CE8504A3C84E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F87F5C152D949E040064AEA0 /* Build configuration list for PBXNativeTarget "goonsdesign_InterView_PeiYunWu" */;
 			buildPhases = (
+				A2D63FE09F3A9C613A07E66C /* [CP] Check Pods Manifest.lock */,
 				F87F5BFE2D949E020064AEA0 /* Sources */,
 				F87F5BFF2D949E020064AEA0 /* Frameworks */,
 				F87F5C002D949E020064AEA0 /* Resources */,
+				B8D834C5D8BBD6842062768A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				F87F5C042D949E020064AEA0 /* goonsdesign_InterView_PeiYunWu */,
 			);
 			name = goonsdesign_InterView_PeiYunWu;
-			packageProductDependencies = (
-			);
 			productName = goonsdesign_InterView_PeiYunWu;
 			productReference = F87F5C022D949E020064AEA0 /* goonsdesign_InterView_PeiYunWu.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A2D63FE09F3A9C613A07E66C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-goonsdesign_InterView_PeiYunWu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D834C5D8BBD6842062768A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-goonsdesign_InterView_PeiYunWu/Pods-goonsdesign_InterView_PeiYunWu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-goonsdesign_InterView_PeiYunWu/Pods-goonsdesign_InterView_PeiYunWu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-goonsdesign_InterView_PeiYunWu/Pods-goonsdesign_InterView_PeiYunWu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F87F5BFE2D949E020064AEA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		F87F5C162D949E040064AEA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D76B85599611BF286906024 /* Pods-goonsdesign_InterView_PeiYunWu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +239,7 @@
 		};
 		F87F5C172D949E040064AEA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D099DDEE7A065DFA3C98FCD /* Pods-goonsdesign_InterView_PeiYunWu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
