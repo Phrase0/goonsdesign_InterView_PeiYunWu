@@ -51,6 +51,7 @@ class RepositoryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationController?.navigationBar.tintColor = .black
         setupUI()
         configureData()
     }
